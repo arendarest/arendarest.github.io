@@ -1,8 +1,408 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<meta http-equiv="refresh" content="0; url=https://arendarest.github.io/arenda/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Загородный отдых на Голубых озерах, забронировать в 2026 дом в Нарейшах</title>
+<meta name="description" content="Снять дом на берегу озера, активный отдых для всей семьи, детская площадка, спортивные игры, пешеходные прогулки по лесу. Безопасный и здоровый отдых в экологически чистой зоне Голубых озер в Беларуси, аренда дома по низким ценам">
+<meta name="keywords" content="отдых в Беларуси ,дом, коттеджи, агроусадьбы, туризм, Глубелька, Глубля, Нарочь">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f8f5f0;color:#333}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('img/dom.jpg') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{font-size:60px;margin-bottom:20px}
+.hero p{font-size:24px;margin-bottom:30px}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#d4a373;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-size:22px;
+}
+
+.section{
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:40px;
+color:#1b4332;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+font-size:22px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.month{
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:30px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.month h3{
+text-align:center;
+margin-bottom:15px;
+}
+
+.days{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:5px;
+}
+
+.day{
+padding:12px;
+text-align:center;
+border-radius:8px;
+font-weight:bold;
+}
+
+.free{background:#22c55e;color:white}
+.busy{background:#ef4444;color:white}
+.reserve{background:#facc15}
+
+.legend{
+text-align:center;
+font-size:20px;
+margin:20px;
+}
+
+.map img{
+width:100%;
+border-radius:15px;
+}
+
+.contacts{
+text-align:center;
+background:#1b4332;
+color:white;
+padding:60px 20px;
+}
+
+.contacts a{
+color:white;
+font-size:30px;
+text-decoration:none;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.hidden-block{display:none;grid-column:1/-1;background:#fff;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.card{cursor:pointer;transition:.3s}
+.card:hover{transform:translateY(-4px)}
+.hidden-block img{max-width:100%;border-radius:12px}
+.eco-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+.comfort-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.price-card{background:#fff;padding:25px;border-radius:15px;max-width:550px;box-shadow:0 8px 20px rgba(0,0,0,.1)}
+.price-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eee;font-size:20px}
+.price-row:last-child{border-bottom:none}
+.discount{background:#fff8d6;padding:12px;border-radius:8px}
+
+
+.lightbox{display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;
+background:rgba(0,0,0,.92);justify-content:center;align-items:center;padding:20px}
+.lightbox img{max-width:95%;max-height:95%;border-radius:12px}
+
+.network-menu{position:fixed;right:20px;bottom:20px;z-index:9999}
+.main-network-btn{width:80px;height:80px;border-radius:50%;background:#1b4332;color:#fff;border:none;cursor:pointer;font-weight:bold}
+.network-icons{display:none;position:absolute;right:0;bottom:90px}
+.network-icons.show{display:block}
+.network-icons a{position:absolute;width:55px;height:55px;border-radius:50%;background:#4A7B67;color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold}
+.n1{right:0;bottom:0}.n2{right:65px;bottom:15px}.n3{right:115px;bottom:55px}.n4{right:130px;bottom:120px}
+
+.feature-item{margin-bottom:12px}
+#welcome-message{
+    max-width:900px;
+    margin:25px auto;
+    padding:18px;
+    background:linear-gradient(135deg,#f4fff4,#eef9ff);
+    border-left:6px solid #4A7B67;
+    border-radius:15px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    color:#1b4332;
+    box-shadow:0 5px 15px rgba(0,0,0,0.12);
+}
+
+.network-icons a{
+    position:absolute;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    overflow:hidden;
+    padding:0;
+    background:white;
+}
+
+.network-icons a img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}    
+</style>
 </head>
+
 <body>
+<div id="welcome-message"></div>
+<script>
+const messages=[
+"🌲 Спасибо Вам за посещение Нарейш!",
+"🦌 Сегодня есть шанс увидеть косулю!",
+"🏞 Голубые озёра ждут Вас!",
+"🍄 Лес уже приготовил грибы и ягоды!",
+"🥾 Самое время отправиться на экотропу!",
+"🌅 Не пропустите сегодняшний закат!",
+"🔥 Мангал уже ждёт гостей!",
+"💨 Здесь воздух чище, чем в городе!"
+];
+document.getElementById('welcome-message').innerHTML=messages[Math.floor(Math.random()*messages.length)];
+</script>
+
+<section class="hero">
+<div>
+<h1>🏡 Отдых на Голубых озёрах</h1>
+<p>Уютный дом в деревне Нарейши</p>
+<a class="btn" href="tel:+375257604717">📞 Позвонить</a>
+<br>
+</br>
+<a class="btn" href="tel:+375336172229">📞 Позвонить</a>
+</div>
+</section>
+
+<section class="section">
+<h2>Почему выбирают нас</h2>
+
+
+
+<div class="features">
+
+<div class="feature-item">
+<div class="card" onclick="toggleBlock('nature')">🌲 Заповедная природа</div>
+<div id="nature" class="hidden-block">
+<img src="img/zapovednik.png" onclick="openLightbox(this.src)">
+<p>Национальный парк, сосновые леса и чистый воздух.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="card" onclick="toggleBlock('lakes')">🏖 Голубые озёра рядом</div>
+<div id="lakes" class="hidden-block">
+<img src="img/glub.png" onclick="openLightbox(this.src)">
+<p>Голубые озёра рядом с домом отдыха.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="card" onclick="toggleBlock('mangal')">🔥 Мангал и отдых во дворе</div>
+<div id="mangal" class="hidden-block">
+<img src="img/mangal.jpg" onclick="openLightbox(this.src)">
+<p>Мангал, отдых во дворе и уютные вечера.</p>
+</div>
+  
+</div>
+<div class="feature-item">
+<div class="card" onclick="toggleBlock('cac')">🔥 Качели и отдых во дворе</div>
+<div id="cac" class="hidden-block">
+<img src="img/cac.jpg" onclick="openLightbox(this.src)">
+<p>Качели и отдых во дворе.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="card" onclick="toggleBlock('comfort')">🚿 Все удобства</div>
+<div id="comfort" class="hidden-block">
+<center>
+<h3>Все удобства</h3>
+<div class="comfort-grid">
+<div>• Полотенце</div><div>• Постельное</div>
+<div>• Холодильник</div><div>• Утюг и доска</div>
+<div>• Набор посуды</div><div>• Электроплита</div>
+<div>• Электрочайник</div><div>• Микроволновка</div>
+<div>• Душевая кабина</div><div>• Стиральная машина</div>
+</div>
+</center>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="card" onclick="toggleBlock('eco')">🥾 Экотропы и прогулки</div>
+<div id="eco" class="hidden-block">
+<div class="eco-gallery">
+<div><img src="img/rodnik.png" onclick="openLightbox(this.src)"><p>Пешком до Болтинского родника</p></div>
+<div><img src="img/rodnikavto.png" onclick="openLightbox(this.src)"><p>На авто до Болтинского родника</p></div>
+<div><img src="img/glub.png" onclick="openLightbox(this.src)"><p>Голубые озёра</p></div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<h2>Фотографии</h2>
+
+<div class="feature-item">
+<div class="card" onclick="toggleBlock('zal')">🛋 Зал</div>
+<div id="zal" class="hidden-block">
+<div class="gallery">
+<img onclick="openLightbox(this.src)" src="img/zal1.jpg">
+<img onclick="openLightbox(this.src)" src="img/zal2.jpg">
+</div>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="card" onclick="toggleBlock('kuhnya')">🍳 Кухня</div>
+<div id="kuhnya" class="hidden-block">
+<div class="gallery">
+<img onclick="openLightbox(this.src)" src="img/eda1.jpg">
+<img onclick="openLightbox(this.src)" src="img/eda2.jpg">
+</div>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="card" onclick="toggleBlock('spalnya')">🛏 Спальня</div>
+<div id="spalnya" class="hidden-block">
+<div class="gallery">
+<img onclick="openLightbox(this.src)" src="img/son1.jpg">
+<img onclick="openLightbox(this.src)" src="img/son2.jpg">
+</div>
+</div>
+</div>
+
+<h2><a href="https://docs.google.com/spreadsheets/d/1gq0VIC0kG_pn_67CX1oQgDPAefY0ss5fIcETbQBAMYo/edit?usp=sharing">📅 Календарь бронирования</a></h2>
+<h2>Стоимость проживания</h2>
+<center>
+
+<div class="price-card">
+<div class="price-row"><span>Сутки</span><strong>160 руб.</strong></div>
+<div class="price-row"><span>Выходные</span><strong>200 руб.</strong></div>
+<div class="price-row discount"><span>При заселении от 7 дней</span><strong>скидка</strong></div>
+</div>
+
+</center>
+</section>
+<section class="section map">
+<h2>🗺 Как нас найти</h2>
+<img src="img/karta.png">
+</section>
+<section class="contacts">
+<h2 style="color:white">Забронировать дом</h2>
+<p>Минская область, Мядельский район, д. Нарейши</p>
+<br>
+<a href="tel:+375257604717">📞 +375 25 760 47 17</a>
+<br>
+<a href="tel:+375257604717">📞 +375 33 621 22 29</a>
+<br>
+</br>
+ <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Farendarest.github.io%2Farenda%2F&label=&icon=github&color=%230a3622&message=&style=flat&tz=UTC">
+</section>
+  
+<footer>
+© 2026 Дом отдыха в Нарейшах
+</footer>
+
+
+<div class="network-menu">
+<button class="main-network-btn" onclick="toggleNetworks()">Мы в<br>сетях</button>
+<div id="networkIcons" class="network-icons">
+
+<a class="n1" href="https://wa.me/375257604717">
+    <img src="img/WhatsApp.jpg"
+         onerror="this.src='img/WhatsApp.png'">
+</a>
+
+<a class="n2" href="viber://chat?number=%2B375257604717">
+    <img src="img/Viber.jpg"
+         onerror="this.src='img/Viber.png'">
+</a>
+
+<a class="n3" href="https://t.me/NikolayShastsilouski">
+    <img src="img/Telegram.jpg"
+         onerror="this.src='img/Telegram.png'">
+</a>
+
+<a class="n4" href="https://www.instagram.com/spva.by?gsh=MWY1eTVsbGRzZDJseQ==">
+    <img src="img/Instagram.jpg"
+         onerror="this.src='img/Instagram.png'">
+</a>
+
+</div>
+</div>
+
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+<img id="lightboxImg" src="">
+</div>
+<script>
+function toggleBlock(id){
+const el=document.getElementById(id);
+el.style.display=(el.style.display==='block')?'none':'block';
+}
+function openLightbox(src){
+document.getElementById('lightbox').style.display='flex';
+document.getElementById('lightboxImg').src=src;
+}
+function closeLightbox(){
+document.getElementById('lightbox').style.display='none';
+}
+function toggleNetworks(){
+document.getElementById('networkIcons').classList.toggle('show');
+}
+</script>
 </body>
+
+
 </html>
