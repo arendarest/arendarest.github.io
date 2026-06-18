@@ -41,19 +41,43 @@
 body{font-family:Arial,sans-serif;background:#f8f5f0;color:#333}
 
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('img/glav.jpg') center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
+    height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url('img/glav.jpg') center center / cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
 }
 
-.hero h1{font-size:60px;margin-bottom:20px}
-.hero p{font-size:24px;margin-bottom:30px}
+/* Телефон */
+@media (max-width:768px){
+    .hero{
+        background:
+            linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+            url('img/glavtelefon.jpg') center center / cover no-repeat;
+    }
 
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:20px;
+    }
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-bottom:30px;
+}
 .btn{
 display:inline-block;
 padding:15px 30px;
