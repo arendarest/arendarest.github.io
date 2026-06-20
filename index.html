@@ -348,15 +348,15 @@ background:rgba(0,0,0,.92);justify-content:center;align-items:center;padding:20p
 }
 
 /* Прогноз */
-
 .forecast{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:15px;
-    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:30px auto;
 }
-
 .forecast-day{
+    width:180px;
     background:white;
     border-radius:15px;
     padding:20px;
@@ -402,7 +402,7 @@ background:rgba(0,0,0,.92);justify-content:center;align-items:center;padding:20p
     line-height:1.6;
     color:#333;
 }
-
+        
 .forecast-day{
     display:flex;
     flex-direction:column;
