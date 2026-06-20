@@ -54,6 +54,8 @@ body{font-family:Arial,sans-serif;background:#f8f5f0;color:#333}
     justify-content:center;
     text-align:center;
     color:white;
+}
+        
 .hero h1{
     font-size:60px;
     margin-bottom:20px;
@@ -62,12 +64,29 @@ body{font-family:Arial,sans-serif;background:#f8f5f0;color:#333}
 .hero p{
     font-size:24px;
     margin-bottom:30px;
-}
-        
+}        
 }
 
+/* Планшет */
+@media (max-width:1024px){
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:22px;
+    }
+
+    .btn{
+        font-size:20px;
+        padding:14px 28px;
+    }
+
+}        
 /* Телефон */
 @media (max-width:768px){
+
     .hero{
         background:
             linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
@@ -84,8 +103,13 @@ body{font-family:Arial,sans-serif;background:#f8f5f0;color:#333}
         font-size:20px;
         padding:0 15px;
     }
-}
 
+    .btn{
+        font-size:18px;
+        padding:12px 24px;
+    }
+
+}
         
 .btn{
 display:inline-block;
