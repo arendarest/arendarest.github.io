@@ -456,6 +456,20 @@ background:rgba(0,0,0,.92);justify-content:center;align-items:center;padding:20p
     object-fit:contain;
     display:block;
     margin:10px auto;
+}     
+
+.photo-day img{
+    width:100%;
+    max-width:900px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    opacity:1;
+    transition:opacity .6s ease;
+}
+
+.photo-day img.fade{
+    opacity:0;
 }        
 </style>
         
@@ -557,7 +571,22 @@ document.getElementById('welcome-message').innerHTML=messages[Math.floor(Math.ra
 </div>
 </section>
 
+<section class="section">
+<h2>📸 Фото дня</h2>
 
+<div class="photo-day">
+
+<img id="photoDay" src="" alt="Фото Голубых озёр">
+
+<br><br>
+
+<button class="btn" onclick="nextPhoto()">
+📷 Показать ещё
+</button>
+
+</div>
+
+</section>
 <section class="section">
 <h2>Фотографии</h2>
 
@@ -819,6 +848,64 @@ document.getElementById("forecast").innerHTML=html;
 }
 
 loadWeather();
+
+const photos=[
+"img/fotoday/1.jpg",
+"img/fotoday/2.jpg",
+"img/fotoday/3.jpg",
+"img/fotoday/4.jpg",
+"img/fotoday/5.jpg",
+"img/fotoday/6.jpg",
+"img/fotoday/7.jpg",
+"img/fotoday/8.jpg",
+"img/fotoday/9.jpg",
+"img/fotoday/10.jpg",
+"img/fotoday/11.jpg",
+"img/fotoday/12.jpg",
+"img/fotoday/13.jpg",
+"img/fotoday/14.jpg",
+"img/fotoday/15.jpg",
+"img/fotoday/16.jpg",
+"img/fotoday/17.jpg"
+];
+
+const today=new Date();
+const start=new Date(today.getFullYear(),0,0);
+const diff=today-start;
+const oneDay=1000*60*60*24;
+
+let current=(Math.floor(diff/oneDay)-1)%photos.length;
+
+if(current<0) current=0;
+
+document.getElementById("photoDay").src=photos[current];
+
+function nextPhoto(){
+
+const img=document.getElementById("photoDay");
+
+// плавно исчезает
+img.classList.add("fade");
+
+setTimeout(()=>{
+
+    current++;
+
+    if(current>=photos.length)
+        current=0;
+
+    img.src=photos[current];
+
+},300);
+
+// после загрузки плавно появляется
+img.onload=function(){
+
+    img.classList.remove("fade");
+
+};
+
+}        
 </script>
         
 </body>
