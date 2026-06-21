@@ -440,6 +440,22 @@ background:rgba(0,0,0,.92);justify-content:center;align-items:center;padding:20p
 
 .forecast-day *{
     text-align:center;
+}  
+
+.weather-icon{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    margin:0 auto 15px;
+    display:block;
+}
+
+.forecast-icon{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+    display:block;
+    margin:10px auto;
 }        
 </style>
         
@@ -693,16 +709,48 @@ const data=await res.json();
 
 function icon(code){
 
-if(code==0) return ["☀️","Ясно","sun"];
-if(code<=3) return ["⛅","Переменная облачность","cloud"];
-if(code<=48) return ["☁️","Пасмурно","cloud"];
-if(code<=67) return ["🌧","Дождь","rain"];
-if(code<=77) return ["❄️","Снег","snow"];
+if(code==0)
+return {
+name:"Ясно",
+class:"sun",
+img:"img/weather/sun.svg"
+};
 
-return ["⛈","Гроза","storm"];
+if(code<=3)
+return {
+name:"Переменная облачность",
+class:"cloud",
+img:"img/weather/cloud-sun.svg"
+};
+
+if(code<=48)
+return {
+name:"Пасмурно",
+class:"cloud",
+img:"img/weather/cloud.svg"
+};
+
+if(code<=67)
+return {
+name:"Дождь",
+class:"rain",
+img:"img/weather/rain.svg"
+};
+
+if(code<=77)
+return {
+name:"Снег",
+class:"snow",
+img:"img/weather/snow.svg"
+};
+
+return{
+name:"Гроза",
+class:"storm",
+img:"img/weather/storm.svg"
+};
 
 }
-
 function advice(code){
 
 if(code==0)
@@ -726,20 +774,18 @@ return "⛈ Во время грозы лучше отдыхать в доме �
 
 const now=icon(data.current.weather_code);
 
-const box=document.getElementById("weather-now");
-
-box.className="weather-card "+now[2];
+box.className="weather-card "+now.class;
 
 box.innerHTML=`
-<div class="weather-icon">${now[0]}</div>
+<img class="weather-icon" src="${now.img}" alt="">
 <div class="weather-temp">${data.current.temperature_2m}°C</div>
-<div class="weather-desc">${now[1]}</div>
+<div class="weather-desc">${now.name}</div>
 <div class="weather-small">
 💧 Влажность: ${data.current.relative_humidity_2m}%<br>
 💨 Ветер: ${data.current.wind_speed_10m} км/ч
 </div>
 `;
-
+        
 const names=["Сегодня","Завтра","Послезавтра"];
 
 let html="";
@@ -751,8 +797,8 @@ const d=icon(data.daily.weather_code[i]);
 html+=`
 <div class="forecast-day">
 <div class="forecast-title">${names[i]}</div>
-<div class="forecast-icon">${d[0]}</div>
-<p>${d[1]}</p>
+<img class="forecast-icon" src="${d.img}" alt="">
+<p>${d.name}</p>
 <div class="forecast-temp">
 ${data.daily.temperature_2m_max[i]}° / ${data.daily.temperature_2m_min[i]}°
 </div>
