@@ -215,13 +215,6 @@ margin:20px;
 .map img{
 width:100%;
 border-radius:15px;
-    width:100%;
-    max-width:900px;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-    opacity:1;
-    transition:opacity .6s ease;        
 }
 
 .contacts{
@@ -592,11 +585,13 @@ document.getElementById('welcome-message').innerHTML=messages[Math.floor(Math.ra
     
 <div class="section map">
 <h2>📸 Фото дня</h2>
+<div class="photo-day">
 <img id="photoDay" src="" alt="Фото Голубых озёр">
 <br><br>
 <button class="btnfotoday" onclick="nextPhoto()">
 📷 Показать ещё
 </button>
+</div>
 </div>
 
 <h2>Фотографии</h2>
