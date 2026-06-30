@@ -529,7 +529,27 @@ video{
         margin-bottom:10px;
     }
 
-}        
+}   
+
+.ai-gallery figure{
+    margin:0;
+    text-align:center;
+}
+
+.ai-gallery img{
+    width:100%;
+    max-width:1000px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+}
+
+.ai-gallery figcaption{
+    margin-top:12px;
+    color:#666;
+    font-size:15px;
+    font-style:italic;
+}
+        
 </style>
         
 </head>
@@ -634,7 +654,25 @@ document.getElementById('welcome-message').innerHTML=messages[Math.floor(Math.ra
 </div>
 </div>
 </div>
-    
+
+<section class="section ai-gallery">
+
+<h2>✨ Атмосфера отдыха</h2>
+
+<figure>
+
+<img src="img/clever.jpg"
+     alt="Атмосфера отдыха на Голубых озёрах">
+
+<figcaption>
+Иллюстрация, созданная с помощью искусственного интеллекта,
+передающая атмосферу отдыха на Голубых озёрах.
+</figcaption>
+
+</figure>
+
+</section>
+        
 <div class="section map">
 <h2>📸 Фото дня</h2>
 <div class="photo-day">
